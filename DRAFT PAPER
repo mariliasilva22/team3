@@ -1,0 +1,16 @@
+Handling Missing Values:
+
+when using the dataframe with cryptos as columns and closing price as rows, missing values appear:
+  solana: 84% of missing values
+  USD: 66% of missing values
+
+as the amount of MV is big for these cryptos, they will be dropped.
+
+two methods will be used for the remaining cryptos:
+  #imputation (checking with median and mode, as both are used for skewed data);
+  #starting the analysis from a point that we have records for all cryptos (except for the ones dropped).
+  
+  
+    #IMPUTATION:
+both median and mode have been applied and when checking the new statistics descriptions, we realized that when using the median, the values changed a lot comparing with the original dataset.
+For this reason Mode will be used
